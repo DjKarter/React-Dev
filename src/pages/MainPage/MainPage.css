@@ -1,27 +1,27 @@
-.classic-bottom{
-    margin-bottom: 20px;
+.classic-bottom {
+  margin-bottom: 20px;
 }
 
 .main-div {
-    position: fixed;
-    left: 37%;
-    width: 15%;
-    right: 37%;
-    top: 100px;
+  position: fixed;
+  left: 37%;
+  width: 15%;
+  right: 37%;
+  top: 100px;
 }
 
 div {
-    font-size:18px;
+  font-size: 18px;
 }
 
 li {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .main-ul {
-    position: fixed;
-    left: 42%;
-    width: 16%;
-    right: 42%;
-    top: 50px;
+  position: fixed;
+  left: 42%;
+  width: 16%;
+  right: 42%;
+  top: 50px;
 }

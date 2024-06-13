@@ -1,23 +1,23 @@
-.classic-bottom{
-    margin-bottom: 20px;
+.classic-bottom {
+  margin-bottom: 20px;
 }
 
-.normal-font div{
-    font-size: 30px;
+.normal-font div {
+  font-size: 30px;
 }
 
 .main-div > * {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .main-div {
-    position: fixed;
-    left: 37%;
-    width: 26%;
-    right: 37%;
-    top: 100px;
+  position: fixed;
+  left: 37%;
+  width: 26%;
+  right: 37%;
+  top: 20px;
 }
 
 div {
-    font-size:18px;
+  font-size: 18px;
 }
