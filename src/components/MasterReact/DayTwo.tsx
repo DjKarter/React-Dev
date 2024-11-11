@@ -27,8 +27,7 @@ function Counter({ init, end }: { init: number; end: number }) {
       The counter is: {count}
       <br />
       {end && count >= end ? (
-        <b style={{color:"red",
-            fontSize:"20px"}}>Counter stopped</b>
+        <b style={{ color: 'red', fontSize: '20px' }}>Counter stopped</b>
       ) : (
         <i>Counter in progress</i>
       )}

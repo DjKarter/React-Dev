@@ -1,8 +1,7 @@
 {
   "name": "react-dev",
   "private": true,
-  "version": "0.0.0",
-  "type": "commonjs",
+  "version": "1.0",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -25,6 +24,8 @@
     "@typescript-eslint/parser": "^7.2.0",
     "@vitejs/plugin-react": "^4.2.1",
     "eslint": "^8.56.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-config-react-app": "^7.0.1",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.6",
     "less": "^4.2.0",
