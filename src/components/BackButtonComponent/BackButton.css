@@ -1,0 +1,20 @@
+.button {
+    background-color: red;
+    border-radius: 50%;
+    border: none;
+   text-align: center;
+    font-size: 20px;
+
+    position: absolute;
+    height: 66px;
+    width: 66px;
+    left: 50px;
+    top: 50px;
+    cursor: pointer;
+}
+
+.button:hover {
+    transform: skew(-10deg);
+}
+
+/*.button:focus { outline: none; }

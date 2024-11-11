@@ -1,7 +1,7 @@
 import './MainPage.css';
 import React, { useState } from 'react';
 import { UseStatePage } from '../UseStatePage/UseStatePage.tsx';
-import { BackButton } from '../../components/BackButton.tsx';
+import { BackButton } from '../../components/BackButtonComponent/BackButton.tsx';
 import { TicTacToePage } from '../TicTacToe/TicTacToe.tsx';
 import { ProductTablePage } from '../ProductTablePage/ProductTablePage.tsx';
 
@@ -12,12 +12,15 @@ export const MainPage: React.FC = () => {
   const [ticTacToePage, setTicTacToePage] = useState(false);
   const [productTablePage, setProductTablePage] = useState(false);
 
+
   const handleBackButton = () => {
     setUseStatePage(false);
     setTicTacToePage(false);
     setProductTablePage(false);
     setMainPage(true);
   };
+
+
 
   return (
     <>
