@@ -1,5 +1,5 @@
 import React from 'react';
-import '../BackButtonComponent/BackButton.css'
+import '../BackButtonComponent/BackButton.css';
 
 interface IBackButton {
   onClick(): void;
@@ -8,9 +8,9 @@ interface IBackButton {
 export const BackButton: React.FC<IBackButton> = ({ onClick }: IBackButton) => {
   return (
     <>
-        <button onClick={onClick} className={'button'}>
-            X
-        </button>
+      <button onClick={onClick} className={'button'}>
+        X
+      </button>
     </>
   );
 };

@@ -19,9 +19,9 @@ li {
 }
 
 .main-ul {
+  list-style-type: none;
   position: fixed;
-  left: 42%;
   width: 16%;
-  right: 42%;
-  top: 50px;
+  transform: translate(-50%, 0);;
+  top: 60px;
 }
