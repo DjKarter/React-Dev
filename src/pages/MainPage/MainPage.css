@@ -20,8 +20,12 @@ li {
 
 .main-ul {
   list-style-type: none;
-  position: fixed;
-  width: 16%;
-  transform: translate(-50%, 0);;
-  top: 60px;
+  display: inline-block;
+  margin: 0;
+  margin-bottom: 50px;
+  padding: 0;
+}
+
+.project-button {
+  min-width: 250px;
 }

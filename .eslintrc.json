@@ -6,6 +6,8 @@
   "root": true,
   "ignorePatterns": ["dist"],
   "rules": {
+    "no-undef": "off",
+    "no-unused-vars": "off",
     "curly": "error",
     "brace-style": [
       "error",

@@ -7,7 +7,7 @@ export const Modal: React.FC = () => {
   const [openAnimated, setOpenAnimated] = useState(false);
 
   return (
-    <div className="App">
+    <>
       {!open && !openAnimated && (
         <button className="open-modal-btn" onClick={() => setOpen(true)}>
           ✨ Открыть окно
@@ -41,6 +41,6 @@ export const Modal: React.FC = () => {
           />
         </ModalWindow>
       }
-    </div>
+    </>
   );
 };

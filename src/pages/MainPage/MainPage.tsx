@@ -5,6 +5,8 @@ import { BackButton } from '../../components/BackButtonComponent/BackButton.tsx'
 import { TicTacToePage } from '../TicTacToe/TicTacToe.tsx';
 import { ProductTablePage } from '../ProductTablePage/ProductTablePage.tsx';
 import { ModalPage } from '../ModalPage/ModalPage..tsx';
+import { QuizPage } from '../QuizPage/QuizPage.tsx';
+import { UsersPage } from '../UsersPage/UsersPage.tsx';
 
 export const MainPage: React.FC = () => {
   const [mainPage, setMainPage] = useState(true);
@@ -13,12 +15,15 @@ export const MainPage: React.FC = () => {
   const [ticTacToePage, setTicTacToePage] = useState(false);
   const [productTablePage, setProductTablePage] = useState(false);
   const [modalPage, setModalPage] = useState(false);
-
+  const [quizPage, setQuizPage] = useState(false);
+  const [usersPage, setUsersPage] = useState(false);
   const handleBackButton = () => {
     setUseStatePage(false);
     setTicTacToePage(false);
     setProductTablePage(false);
     setModalPage(false);
+    setQuizPage(false);
+    setUsersPage(false);
     setMainPage(true);
   };
 
@@ -31,6 +36,7 @@ export const MainPage: React.FC = () => {
     return (
       <li>
         <button
+          className={'project-button'}
           onClick={() => {
             setPage(!StatePage);
             setMainPage(!mainPage);
@@ -55,12 +61,16 @@ export const MainPage: React.FC = () => {
             'Product Table'
           )}
           {createListElement(setModalPage, modalPage, 'Modal')}
+          {createListElement(setQuizPage, quizPage, 'Quiz')}
+          {createListElement(setUsersPage, usersPage, 'Users')}
         </ul>
       )}
       {useStatePage && <UseStatePage />}
       {ticTacToePage && <TicTacToePage />}
       {productTablePage && <ProductTablePage />}
       {modalPage && <ModalPage />}
+      {quizPage && <QuizPage />}
+      {usersPage && <UsersPage />}
     </>
   );
 };

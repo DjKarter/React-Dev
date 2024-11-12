@@ -82,8 +82,10 @@ body {
 .game {
   display: flex;
   flex-direction: row;
+  margin-top: 50px;
 }
 
 .game-info {
   margin-left: 20px;
+  min-height: 663px;
 }

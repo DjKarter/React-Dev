@@ -16,3 +16,17 @@ export type SearchInputType = {
   onFilterTextChange(elem: string): void;
   onInStockOnlyChange(elem: boolean): void;
 };
+
+export type QuestionType = {
+  title: string;
+  variants: Array<string>;
+  correct: number;
+};
+
+export type UserDataType = {
+  id: number;
+  email: string;
+  first_name: string;
+  last_name: string;
+  avatar: string;
+};
