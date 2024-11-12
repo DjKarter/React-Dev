@@ -1,6 +1,6 @@
 import React, { ChangeEvent, useEffect, useState } from 'react';
 import { Users } from '../../components/UsersComponent/Users.tsx';
-import {Success} from "../../components/UsersComponent/Success.tsx";
+import { Success } from '../../components/UsersComponent/Success.tsx';
 
 // Тут список пользователей: https://reqres.in/api/users
 
@@ -37,12 +37,12 @@ export const UsersPage: React.FC = () => {
 
   const onClickSendInvites = () => {
     setSuccess(true);
-  }
+  };
 
   return (
     <>
       {success ? (
-        <Success count={invites.length}/>
+        <Success count={invites.length} />
       ) : (
         <Users
           searchValue={searchValue}

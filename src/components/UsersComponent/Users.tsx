@@ -13,7 +13,7 @@ export const Users: React.FC<{
   isLoading: boolean;
   invites: number[];
   onClickInvite: (id: number) => void;
-  onClickSendInvites: ()=>void;
+  onClickSendInvites: () => void;
 }> = ({
   searchValue,
   onChangeSearchValue,
@@ -21,7 +21,7 @@ export const Users: React.FC<{
   isLoading,
   invites,
   onClickInvite,
-                            onClickSendInvites
+  onClickSendInvites,
 }) => {
   return (
     <>
@@ -66,7 +66,11 @@ export const Users: React.FC<{
               ))}
           </ul>
         )}
-        {invites.length > 0 && <button onClick={onClickSendInvites} className="send-invite-btn">Отправить приглашение</button>}
+        {invites.length > 0 && (
+          <button onClick={onClickSendInvites} className="send-invite-btn">
+            Отправить приглашение
+          </button>
+        )}
       </div>
     </>
   );
