@@ -1,5 +1,5 @@
 import React from 'react';
-import '../BackButtonComponent/BackButton.css';
+import './/BackButton.css';
 
 interface IBackButton {
   onClick(): void;

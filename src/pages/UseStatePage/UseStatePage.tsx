@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { ShoppingList } from '../../components/useStateComponents/ShoppingList.tsx';
+import { ShoppingList } from '../../components/UseStateComponents/ShoppingList.tsx';
 import { products } from '../../shared/lib/consts.ts';
 import './UseStatePage.css';
-import { MyButton } from '../../components/useStateComponents/MyButton.tsx';
+import { MyButton } from '../../components/UseStateComponents/MyButton.tsx';
 
 export const UseStatePage: React.FC = () => {
   {

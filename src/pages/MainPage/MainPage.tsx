@@ -1,12 +1,13 @@
 import './MainPage.css';
 import React, { useState } from 'react';
 import { UseStatePage } from '../UseStatePage/UseStatePage.tsx';
-import { BackButton } from '../../components/BackButtonComponent/BackButton.tsx';
+import { BackButton } from '../../components/BackButtonComponents/BackButton.tsx';
 import { TicTacToePage } from '../TicTacToe/TicTacToe.tsx';
 import { ProductTablePage } from '../ProductTablePage/ProductTablePage.tsx';
-import { ModalPage } from '../ModalPage/ModalPage..tsx';
+import { ModalPage } from '../ModalPage/ModalPage.tsx';
 import { QuizPage } from '../QuizPage/QuizPage.tsx';
 import { UsersPage } from '../UsersPage/UsersPage.tsx';
+import { CurrencyConvertorPage } from '../CurrencyConvertorPage/CurrencyConvertorPage.tsx';
 
 export const MainPage: React.FC = () => {
   const [mainPage, setMainPage] = useState(true);
@@ -17,6 +18,8 @@ export const MainPage: React.FC = () => {
   const [modalPage, setModalPage] = useState(false);
   const [quizPage, setQuizPage] = useState(false);
   const [usersPage, setUsersPage] = useState(false);
+  const [currencyConvertorPage, setCurrencyConvertorPage] = useState(false);
+
   const handleBackButton = () => {
     setUseStatePage(false);
     setTicTacToePage(false);
@@ -28,7 +31,6 @@ export const MainPage: React.FC = () => {
   };
 
   const createListElement = (
-    // eslint-disable-next-line no-unused-vars
     setPage: (b: boolean) => void,
     StatePage: boolean,
     text: string
@@ -63,6 +65,11 @@ export const MainPage: React.FC = () => {
           {createListElement(setModalPage, modalPage, 'Modal')}
           {createListElement(setQuizPage, quizPage, 'Quiz')}
           {createListElement(setUsersPage, usersPage, 'Users')}
+          {createListElement(
+            setCurrencyConvertorPage,
+            currencyConvertorPage,
+            'Currency Convertor'
+          )}
         </ul>
       )}
       {useStatePage && <UseStatePage />}
@@ -71,6 +78,7 @@ export const MainPage: React.FC = () => {
       {modalPage && <ModalPage />}
       {quizPage && <QuizPage />}
       {usersPage && <UsersPage />}
+      {currencyConvertorPage && <CurrencyConvertorPage />}
     </>
   );
 };
