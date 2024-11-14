@@ -1,21 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import { Block } from './Block.tsx';
-import { types } from 'sass';
-import Error = types.Error;
+import { RatesType } from '../../shared/lib/types.ts';
 
 export const CurrencyConvertor: React.FC = () => {
   const [fromCurrency, setFromCurrency] = useState('RUB');
   const [toCurrency, setToCurrency] = useState('USD');
   const [fromPrice, setFromPrice] = useState(0);
-  const [toPrice, setToPrice] = useState(0);
-  const [rates, setRates] = useState({});
-
+  const [toPrice, setToPrice] = useState(1);
+  //const [rates, setRates] = useState<RatesType | {}>({});
+  const ratesRef = React.useRef<RatesType | {}>({});
   useEffect(() => {
     fetch('https://www.cbr-xml-daily.ru/latest.js')
       .then((res) => res.json())
       .then((json) => {
-        setRates(json.rates);
-        console.log(json.rates);
+        ratesRef.current = {
+          RUB: 1,
+          USD: json.rates['USD'],
+          EUR: json.rates['EUR'],
+          GBP: json.rates['GBP'],
+        };
+        console.log(ratesRef);
+        onChangeToPrice(1);
       })
       .catch((error) => {
         alert('Не удалось получить данные. Ошибка: ' + error);
@@ -23,12 +28,33 @@ export const CurrencyConvertor: React.FC = () => {
   }, []);
 
   const onChangeFromPrice = (value: number) => {
-    const price = value / rates;
+    // @ts-ignore
+    const price = value / ratesRef.current[fromCurrency];
+    // @ts-ignore
+    const result =
+      Math.round(price * ratesRef.current[toCurrency] * 1000) / 1000;
+    setToPrice(result);
     setFromPrice(value);
   };
   const onChangeToPrice = (value: number) => {
+    // @ts-ignore
+    const result =
+      Math.round(
+        (ratesRef.current[fromCurrency] / ratesRef.current[toCurrency]) *
+          value *
+          1000
+      ) / 1000;
+    setFromPrice(result);
     setToPrice(value);
   };
+
+  useEffect(() => {
+    onChangeFromPrice(fromPrice);
+  }, [fromCurrency]);
+
+  useEffect(() => {
+    onChangeToPrice(toPrice);
+  }, [toCurrency]);
 
   return (
     <>

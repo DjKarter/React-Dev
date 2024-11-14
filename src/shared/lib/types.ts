@@ -30,3 +30,10 @@ export type UserDataType = {
   last_name: string;
   avatar: string;
 };
+
+export type RatesType = {
+  RUB: number;
+  USD: number;
+  EUR: number;
+  GBP: number;
+};

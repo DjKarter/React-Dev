@@ -27,10 +27,9 @@ export const Block: React.FC<{
     </ul>
     <input
       onChange={(e) => {
-        onChangeValue(parseInt(e.target.value) || 0);
-        value = parseInt(e.target.value);
+        let temp = e.target.value;
+        onChangeValue(parseFloat(temp));
       }}
-
       value={value}
       type="number"
       placeholder={'0'}
