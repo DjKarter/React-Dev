@@ -68,3 +68,5 @@ export const quizQuestions = [
     correct: 2,
   },
 ];
+
+export const defaultCurrencies = ['RUB', 'USD', 'EUR', 'GBP'];

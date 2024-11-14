@@ -27,6 +27,7 @@ export const MainPage: React.FC = () => {
     setModalPage(false);
     setQuizPage(false);
     setUsersPage(false);
+    setCurrencyConvertorPage(false);
     setMainPage(true);
   };
 
