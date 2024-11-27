@@ -29,3 +29,5 @@ React + TypeScript (Vite + Yarn + Prettier/ESLint)
 #### 7. Currency Convertor
 
      Приложение для расчета курса валют
+
+Для запуска: **yarn dev**

@@ -31,7 +31,7 @@ export const User: React.FC<
     <img
       onClick={() => onClickInvite(id)}
       className="action"
-      src={`/src/shared/images/${isInvited ? 'minus' : 'plus'}.svg`}
+      src={`${import.meta.env.BASE_URL}src/shared/images/${isInvited ? 'minus' : 'plus'}.svg`}
       alt="Action"
     />
   </li>

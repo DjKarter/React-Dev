@@ -8,7 +8,7 @@ export const CurrencyConvertor: React.FC = () => {
   const [fromPrice, setFromPrice] = useState(0);
   const [toPrice, setToPrice] = useState(1);
   //const [rates, setRates] = useState<RatesType | {}>({});
-  const ratesRef = React.useRef<RatesType | {}>({});
+  const ratesRef = React.useRef<RatesType | {} | string>({});
   useEffect(() => {
     fetch('https://www.cbr-xml-daily.ru/latest.js')
       .then((res) => res.json())
@@ -30,16 +30,16 @@ export const CurrencyConvertor: React.FC = () => {
   const onChangeFromPrice = (value: number) => {
     // @ts-ignore
     const price = value / ratesRef.current[fromCurrency];
-    // @ts-ignore
     const result =
+      //@ts-ignore
       Math.round(price * ratesRef.current[toCurrency] * 1000) / 1000;
     setToPrice(result);
     setFromPrice(value);
   };
   const onChangeToPrice = (value: number) => {
-    // @ts-ignore
     const result =
       Math.round(
+        //@ts-ignore
         (ratesRef.current[fromCurrency] / ratesRef.current[toCurrency]) *
           value *
           1000

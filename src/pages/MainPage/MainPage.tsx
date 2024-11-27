@@ -53,7 +53,7 @@ export const MainPage: React.FC = () => {
 
   return (
     <>
-      <BackButton onClick={handleBackButton}></BackButton>
+      {!mainPage && <BackButton onClick={handleBackButton}></BackButton>}
       {mainPage && (
         <ul className={'main-ul'}>
           {createListElement(setUseStatePage, useStatePage, 'useState')}
