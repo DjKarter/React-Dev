@@ -1,0 +1,24 @@
+{
+  "extends": ["eslint:recommended", "plugin:react/jsx-runtime", "prettier"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": { "project": true, "tsconfigRootDir": "./" },
+  "plugins": ["@typescript-eslint"],
+  "root": true,
+  "ignorePatterns": ["dist"],
+  "rules": {
+    "no-undef": "off",
+    "no-unused-vars": "off",
+    "curly": "error",
+    "brace-style": [
+      "error",
+      "1tbs",
+      {
+        "allowSingleLine": false
+      }
+    ]
+  },
+  "overrides": [
+    { "files": ["*.{c,m,}{t,j}s", "*.{t,j}sx"] },
+    { "files": ["*{test,spec}.{t,j}s?(x)"], "env": { "jest": true } }
+  ]
+}
